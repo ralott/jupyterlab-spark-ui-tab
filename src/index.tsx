@@ -33,13 +33,13 @@ function activate(app: JupyterFrontEnd, palette: ICommandPalette): void {
     console.log("in activate");
 
     commands.addCommand(CommandIDs.run, {
-        label: 'spark UI',
+        label: 'Spark UI',
         execute: (args: ReadonlyJSONObject) => {
 
 
             const sparkWidget = new SparkUI(app);
 
-            sparkWidget.title.label = 'Open Spark UI';
+            sparkWidget.title.label = 'Spark UI';
 
             let main = new MainAreaWidget({content: sparkWidget});
 
